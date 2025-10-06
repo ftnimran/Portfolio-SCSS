@@ -1,3 +1,8 @@
+/* ====================== ALL IMPORT FILES ====================== */
+@import '_keyframesAnimation.scss';
+@import '_responsiveMobile.scss';
+@import '_allMixin.scss';
+
 * {
     margin: 0;
     padding: 0;
@@ -160,50 +165,8 @@ body {
 }
 
 
-@keyframes slideRight {
-    0% {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
 
-    100% {
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
 
-@keyframes slideLeft {
-    0% {
-        transform: translateX(100px);
-        opacity: 0;
-    }
 
-    100% {
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
 
-@keyframes slideTop {
-    0% {
-        transform: translateY(100px);
-        opacity: 0;
-    }
 
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes slideBottom {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
