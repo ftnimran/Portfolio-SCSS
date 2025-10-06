@@ -45,7 +45,7 @@ body {
     font-weight: 500;
     margin-left: 35px;
     transform: .3s;
-    transition: 10s;
+    transition: 0.5s;
     opacity: 0;
     animation: slideTop .5s ease forwards;
     animation-delay: calc(.2s * var(--i));
@@ -53,11 +53,12 @@ body {
 
 .navbar a:hover {
     color: #0ef;
-    text-decoration: underline;
-    text-decoration-color: #0ef;
-    text-underline-offset: 5px;
-    /* transition: 5s; */
+    // text-decoration: underline;
+    // text-decoration-color: #0ef;
+    // text-underline-offset: 5px;
 }
+
+
 
 .home {
     position: relative;
@@ -206,4 +207,3 @@ body {
         opacity: 1;
     }
 }
-
