@@ -32,7 +32,7 @@ body {
   width: 4rem;
   margin: 0;
   padding: 0;
-  border-radius: 170px;
+  border-radius: 50%;
   box-shadow: 0 0 20px #0ef;
   position: relative;
   opacity: 0;
