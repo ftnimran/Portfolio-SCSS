@@ -33,3 +33,37 @@ var typed = new Typed(".auto-type", {
 });
 
 // ====================End Auto Typing==================
+
+
+
+// ==================== Header ==================
+
+const menuBtn = document.getElementById("menu-btn");
+    const closeBtn = document.getElementById("close-btn");
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
+
+    // Open Sidebar
+    menuBtn.addEventListener("click", () => {
+      sidebar.classList.add("active");
+      overlay.classList.add("active");
+    });
+
+    // Close Sidebar
+    function closeSidebar() {
+      sidebar.classList.remove("active");
+      overlay.classList.remove("active");
+    }
+
+    closeBtn.addEventListener("click", closeSidebar);
+    overlay.addEventListener("click", closeSidebar);
+
+    // Close sidebar on link click
+    sidebar.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", closeSidebar);
+    });
+
+    // Close on ESC key
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") closeSidebar();
+    });

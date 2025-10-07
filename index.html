@@ -17,21 +17,42 @@
     <!-- ====================Header Section==================== -->
 
     <header class="header" id="header">
-        <!-- <div class="toggle">
-            <i class='bx bx-menu'></i>
-        </div> -->
-        <img class="logo" src="image/icon_01.png" alt="">
-
-        <nav class="navbar">
+        <img class="logo" src="image/icon_01.png" alt="logo">
+        <button class="menu-btn" id="menu-btn">☰</button>
+        <nav class="navbar" id="sidebar">
+            <button class="close-btn" id="close-btn">✖</button>
             <a href="#home" style="--i:1" class="active">Home</a>
             <a href="#about" style="--i:2">About</a>
             <a href="#Skills" style="--i:3">Skills</a>
             <a href="#projects" style="--i:4">Projects</a>
             <a href="#contact" style="--i:5">Contact</a>
             <a href="#resume" style="--i:6">Resume</a>
-            
+
         </nav>
     </header>
+
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+        <section id="home">Home Section</section>
+        <section id="about">About Section</section>
+        <section id="skills">Skills Section</section>
+        <section id="projects">Projects Section</section>
+        <section id="contact">Contact Section</section>
+        <section id="resume">Resume Section</section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -39,7 +60,7 @@
 
     <!-- ====================Home Section==================== -->
 
-    <section class="home" id="home">
+    <!-- <section class="home" id="home">
         <div class="home-content">
             <h3>Hello, It's Me</h3>
             <h1>Imran Ali</h1>
@@ -56,7 +77,7 @@
             <a href="#" class="btn-box">More About Me</a>
         </div>
 
-    </section>
+    </section> -->
 
 
 
@@ -93,7 +114,7 @@
 
 
 
-   <!-- <h1 class="sub-title">My <span>Skills</span></h1>
+    <!-- <h1 class="sub-title">My <span>Skills</span></h1>
 
     <section>
         <div class="container1" id="Skills">
