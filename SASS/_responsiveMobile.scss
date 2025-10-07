@@ -13,7 +13,7 @@
     height: 100%;
     background: rgba(30, 30, 30, 0.5);
     backdrop-filter: blur(20px);
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: -1px solid rgba(255, 255, 255, 0.1);
     box-shadow: -6px 0 20px rgba(0, 0, 0, 0.3);
     flex-direction: column;
     padding-top: 70px;
@@ -44,11 +44,13 @@
   }
 
   header nav a {
-    padding: 15px 25px;
+    padding: 15px 35%;
+    margin: 0;
     width: 100%;
     display: block;
     font-size: 1.1rem;
     letter-spacing: 0.5px;
+    background: rgba(30, 30, 30, 0.5);
   }
 
   .overlay {
