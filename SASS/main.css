@@ -156,7 +156,7 @@ header nav a:hover {
     position: fixed;
     top: 0;
     right: -300px;
-    width: 280px;
+    width: 50%;
     height: 100%;
     background: rgba(30, 30, 30, 0.5);
     -webkit-backdrop-filter: blur(20px);
