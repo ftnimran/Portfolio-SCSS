@@ -51,13 +51,13 @@ document.addEventListener("keydown", e => {
 
 // ====================Start Auto Typing==================
 
-// var typed = new Typed(".auto-type", {
-//     strings: ['MERN Stack Developer', 'Full Stack Web Developer', 'Frontend Developer.', 'Backend Developer.', 'UI &amp; UX Designer.'],
-//     typeSpeed: 70,
-//     backSpeed: 70,
-//     backDelay: 1000,
-//     loop: true
-// });
+var typed = new Typed(".auto-type", {
+  strings: ['MERN Stack Developer', 'Full Stack Web Developer', 'Frontend Developer.', 'Backend Developer.', 'UI &amp; UX Designer.'],
+  typeSpeed: 70,
+  backSpeed: 70,
+  backDelay: 1000,
+  loop: true
+});
 
 // ====================End Auto Typing==================
 

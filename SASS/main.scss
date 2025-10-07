@@ -96,15 +96,15 @@ header nav a {
   margin-left: 35px;
   letter-spacing: 0.5px;
   transform: .3s;
-  transition: .5s;
+  transition: .5s ease;
   opacity: 0;
   animation: slideTop .5s ease forwards;
   animation-delay: calc(.2s * var(--i));
 
   &:hover {
     color: #0ef;
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-3px);
+    // background: rgba(255, 255, 255, 0.1);
+    // transform: translateY(-3px);
   }
 }
 
@@ -113,108 +113,131 @@ header nav a {
 }
 
 
-@import '_responsiveMobile.scss';
-
-
-
-
-
+/* ====================Home Section==================== */
 
 .home {
-    position: relative;
-    width: 100%;
-    justify-content: space-between;
-    height: 100vh;
-    background: url(image/background\ 2.png);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    padding: 70px 10% 0;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  height: 100vh;
+  // background: url("/image/download.png");
+  // background-size: cover;
+  // background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 70px 10% 0;
 }
 
 .home-content {
-    max-width: 600px;
+  max-width: 600px;
 }
 
 .home-content h3 {
-    font-size: 32px;
-    font-weight: 700;
-    opacity: 0;
-    animation: slideBottom 1s ease forwards;
-    animation-delay: .7s;
+  font-size: 32px;
+  font-weight: 700;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: .7s;
 }
 
 .home-content h3:nth-of-type(2) {
-    margin-bottom: 30px;
-    animation: slideTop 1s ease forwards;
-    animation-delay: .7s;
+  margin-bottom: 30px;
+  animation: slideTop 1s ease forwards;
+  animation-delay: .7s;
 }
 
 .home-content h3 span {
-    color: #0ef;
+  color: #0ef;
 }
 
 .home-content h1 {
-    font-size: 56px;
-    font-weight: 700px;
-    margin: -3px 0;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-    animation-delay: 1s;
+  font-size: 56px;
+  font-weight: 700px;
+  margin: -3px 0;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s;
 }
 
 .home-content p {
-    font-size: 20px;
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: 1s;
+  font-size: 20px;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s;
 }
 
 .home-sci a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: 2px solid #0ef;
-    border-radius: 50%;
-    font-size: 20px;
-    color: #0ef;
-    text-decoration: none;
-    transition: .5s ease;
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: calc(.2s * var(--i));
-    margin: 30px 15px 30px 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #0ef;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #0ef;
+  text-decoration: none;
+  transition: .5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+  margin: 30px 15px 30px 0;
 }
 
 .home-sci a:hover {
-    background: #0ef;
-    color: #081b29;
-    box-shadow: 0 0 20px #0ef;
+  background: #0ef;
+  color: #081b29;
+  box-shadow: 0 0 20px #0ef;
 }
 
 .btn-box {
-    display: inline-block;
-    padding: 12px 28px;
-    background: #0ef;
-    border-radius: 40px;
-    font-size: 16px;
-    color: #081b29;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: 2s;
-    box-shadow: 0 0 5px #0ef,
-        0 0 25px #0ef;
+  display: inline-block;
+  padding: 12px 28px;
+  background: #0ef;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #081b29;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  transition: .5s ease;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
+  box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef;
 }
 
 .btn-box:hover {
-    box-shadow: 0 0 5px cyan,
-        0 0 25px cyan, 0 0 50px cyan,
-        0 0 100px cyan, 0 0 200px cyan;
+  box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan;
 }
+
+.home-content img {
+  height: 30rem;
+  width: 30rem;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #0ef;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: .7s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====================Responsive Mobile==================== */
+@import '_responsiveMobile.scss';

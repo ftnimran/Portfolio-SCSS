@@ -132,21 +132,125 @@ header nav a {
   margin-left: 35px;
   letter-spacing: 0.5px;
   transform: 0.3s;
-  transition: 0.5s;
+  transition: 0.5s ease;
   opacity: 0;
   animation: slideTop 0.5s ease forwards;
   animation-delay: calc(0.2s * var(--i));
 }
 header nav a:hover {
   color: #0ef;
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-3px);
 }
 
 .overlay {
   display: none;
 }
 
+/* ====================Home Section==================== */
+.home {
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 70px 10% 0;
+}
+
+.home-content {
+  max-width: 600px;
+}
+
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 30px;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.home-content h3 span {
+  color: #0ef;
+}
+
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700px;
+  margin: -3px 0;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.home-content p {
+  font-size: 20px;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.home-sci a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #0ef;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #0ef;
+  text-decoration: none;
+  transition: 0.5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+  margin: 30px 15px 30px 0;
+}
+
+.home-sci a:hover {
+  background: #0ef;
+  color: #081b29;
+  box-shadow: 0 0 20px #0ef;
+}
+
+.btn-box {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #0ef;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #081b29;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  transition: 0.5s ease;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
+  box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+}
+
+.btn-box:hover {
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+.home-content img {
+  height: 30rem;
+  width: 30rem;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #0ef;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 0.7s;
+}
+
+/* ====================Responsive Mobile==================== */
 /* ====================== RESPONSIVE STYLE ====================== */
 @media (max-width: 767px) {
   .menu-btn {
@@ -215,99 +319,28 @@ header nav a:hover {
     opacity: 1;
     visibility: visible;
   }
-}
-.home {
-  position: relative;
-  width: 100%;
-  justify-content: space-between;
-  height: 100vh;
-  background: url(image/background\ 2.png);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  padding: 70px 10% 0;
-}
-
-.home-content {
-  max-width: 600px;
-}
-
-.home-content h3 {
-  font-size: 32px;
-  font-weight: 700;
-  opacity: 0;
-  animation: slideBottom 1s ease forwards;
-  animation-delay: 0.7s;
-}
-
-.home-content h3:nth-of-type(2) {
-  margin-bottom: 30px;
-  animation: slideTop 1s ease forwards;
-  animation-delay: 0.7s;
-}
-
-.home-content h3 span {
-  color: #0ef;
-}
-
-.home-content h1 {
-  font-size: 56px;
-  font-weight: 700px;
-  margin: -3px 0;
-  opacity: 0;
-  animation: slideRight 1s ease forwards;
-  animation-delay: 1s;
-}
-
-.home-content p {
-  font-size: 20px;
-  opacity: 0;
-  animation: slideLeft 1s ease forwards;
-  animation-delay: 1s;
-}
-
-.home-sci a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: 2px solid #0ef;
-  border-radius: 50%;
-  font-size: 20px;
-  color: #0ef;
-  text-decoration: none;
-  transition: 0.5s ease;
-  opacity: 0;
-  animation: slideLeft 1s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
-  margin: 30px 15px 30px 0;
-}
-
-.home-sci a:hover {
-  background: #0ef;
-  color: #081b29;
-  box-shadow: 0 0 20px #0ef;
-}
-
-.btn-box {
-  display: inline-block;
-  padding: 12px 28px;
-  background: #0ef;
-  border-radius: 40px;
-  font-size: 16px;
-  color: #081b29;
-  letter-spacing: 1px;
-  text-decoration: none;
-  font-weight: 600;
-  opacity: 0;
-  animation: slideTop 1s ease forwards;
-  animation-delay: 2s;
-  box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
-}
-
-.btn-box:hover {
-  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+  /* ====================Home Section==================== */
+  .home {
+    padding: 170px 20px 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .home-content h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+  }
+  .home-content h3:nth-of-type(2) {
+    margin-bottom: 15px;
+  }
+  .home-content h1 {
+    font-size: 2.35rem;
+    font-weight: 700;
+    margin: -3px 0;
+  }
+  .home-content p {
+    font-size: 1.1rem;
+  }
+  .home-content img {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
