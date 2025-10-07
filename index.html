@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imran Ali | Portfolio</title>
     <link rel="icon" href="image/icon_01.png">
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="SASS/main.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -14,20 +13,17 @@
 
 <body>
 
-    <!-- ====================Header Section==================== -->
-
-    <header class="header" id="header">
-        <img class="logo" src="image/icon_01.png" alt="logo">
+    <header>
+        <img src="image/icon_01.png" class="logo" alt="Logo">
         <button class="menu-btn" id="menu-btn">☰</button>
-        <nav class="navbar" id="sidebar">
+        <nav id="sidebar">
             <button class="close-btn" id="close-btn">✖</button>
-            <a href="#home" style="--i:1" class="active">Home</a>
+            <a href="#home" style="--i:1">Home</a>
             <a href="#about" style="--i:2">About</a>
-            <a href="#Skills" style="--i:3">Skills</a>
+            <a href="#skills" style="--i:3">Skills</a>
             <a href="#projects" style="--i:4">Projects</a>
             <a href="#contact" style="--i:5">Contact</a>
             <a href="#resume" style="--i:6">Resume</a>
-
         </nav>
     </header>
 
@@ -39,234 +35,9 @@
         <section id="skills">Skills Section</section>
         <section id="projects">Projects Section</section>
         <section id="contact">Contact Section</section>
-        
+        <section id="resume">Resume Section</section>
     </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- ====================Home Section==================== -->
-
-    <!-- <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hello, It's Me</h3>
-            <h1>Imran Ali</h1>
-            <h3>And I'm a <span class="auto-type"> </span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Aliquam, at omnis sit officiis consequatur
-                libero, iusto, quod vel expedita dignissimos deserunt? Iste harum quidem amet odit sed excepturi, quo
-                dolore.</p>
-            <div class="home-sci">
-                <a href="#" style="--i:7"><i class='bx bxl-linkedin'></i></a>
-                <a href="#" style="--i:8"><i class='bx bxl-github'></i></a>
-                <a href="#" style="--i:9"><i class='bx bxl-instagram'></i></a>
-                <a href="#" style="--i:10"><i class='bx bxl-whatsapp'></i></a>
-            </div>
-            <a href="#" class="btn-box">More About Me</a>
-        </div>
-
-    </section> -->
-
-
-
-
-
-    <!-- ====================About Section==================== -->
-
-    <!-- <section id="about" class="about">
-        <div class="about-img">
-            <img src="image/background 1.png">
-        </div>
-        <div class="about-text">
-            <h2>About <span>Me</span></h2>
-            <h4>Full Stack Developer!</h4>
-            <p>I am a skilled web designer with over 3 years of experience in the industry. My passion lies in creating
-                captivating website designs and implementing them through frontend development. Itake pride in staying
-                up-to-date with current design trends and leveraging my creativity to produce visually appealing and
-                user-friendly websites. Throughout my career, I have developed a deep understanding of user experience
-                (UX) and user interface (UI) principles. By putting myself in the shoes of the end-users, I strive to
-                create intuitive and seamless browsing experiences. I believe that a well-designed website should not
-                only look visually appealing but also provide a smooth and enjoyable interaction for visitors. When
-                starting a new project, I thoroughly research and analyze the target audience and the client's specific
-                requirements. This enables me to tailor my designs to meet their expectations and deliver a unique
-                online presence that aligns with their brand identity..</p>
-            <a href="#" class="btn-box">More About Me</a>
-        </div>
-    </section> -->
-
-
-
-
-
-    <!-- ====================Skills Section==================== -->
-
-
-
-    <!-- <h1 class="sub-title">My <span>Skills</span></h1>
-
-    <section>
-        <div class="container1" id="Skills">
-            <h1 class="heading1">Technical Skills</h1>
-            <div class="Technical-bars">
-                <div class="bar"><i class='bx bxl-html5' style='color:#c95d2e' ></i>
-                    <div class="info">
-                        <span>HTML</span>
-                    </div>
-                    <div class="progress-line html">
-                        <span></span>
-                    </div>
-                </div>
-                <div class="bar"><i class='bx bxl-css3' style='color:#147bbc' ></i>
-                    <div class="info">
-                        <span>CSS</span>
-                    </div>
-                    <div class="progress-line css">
-                        <span></span>
-                    </div>
-                </div>
-                <div class="bar"><i class='bx bxl-javascript' style='color:#b0bc1e' ></i>
-                    <div class="info">
-                        <span>Javascript</span>
-                    </div>
-                    <div class="progress-line javascript">
-                        <span></span>
-                    </div>
-                </div>
-                <div class="bar"><i class='bx bxl-python' style='color:#c32ec9' ></i>
-                    <div class="info">
-                        <span>Python</span>
-                    </div>
-                    <div class="progress-line python">
-                        <span></span>
-                    </div>
-                </div>
-                <div class="bar"><i class='bx bxl-react' style='color:#69bcbc' ></i>
-                    <div class="info">
-                        <span>react</span>
-                    </div>
-                    <div class="progress-line react">
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="container1">
-            <h1 class="heading1">Professional Skills</h1>
-
-            <div class="radial-bars">
-                <svg x="0px" y="0px" viewBox="0 0 200 200" >
-                    <circle class="progress-bar" cx="100" cy="100" r="80" ></circle>
-                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                </svg>
-                <div class="percentage">90%</div>
-                <div class="text">Creativity</div>
-            </div>
-
-            <div class="radial-bars">
-                <svg x="0px" y="0px" viewBox="0 0 200 200" >
-                    <circle class="progress-bar" cx="100" cy="100" r="80" ></circle>
-                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                </svg>
-                <div class="percentage">65%</div>
-                <div class="text">Communication</div>
-            </div>
-
-            <div class="radial-bars">
-                <svg x="0px" y="0px" viewBox="0 0 200 200" >
-                    <circle class="progress-bar" cx="100" cy="100" r="80" ></circle>
-                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                </svg>
-                <div class="percentage">75%</div>
-                <div class="text">Problem Solving</div>
-            </div>
-
-            <div class="radial-bars">
-                <svg x="0px" y="0px" viewBox="0 0 200 200" >
-                    <circle class="progress-bar" cx="100" cy="100" r="80" ></circle>
-                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                </svg>
-                <div class="percentage">85%</div>
-                <div class="text">Teamwork</div>
-            </div>
-
-        </div>
-
-    </section> -->
-
-
-
-    <!-- Projects Section -->
-
-    <!-- <section class="projects" id="projects">
-        <div class="container">
-                <h1 class="sub-title">My <span>Projects</span></h1>
-                <div class="projects-list">
-                    <div>
-                        <i class='bx bx-code' style='color:#00eeff'></i>
-                        <h2>UI/UX Design</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quis neque dicta explicabo
-                            velit similique delectus, mollitia error quod, ab cum non, blanditiis commodi voluptate et
-                            veritatis repellendus officiis iusto?</p>
-                        <a href="#" class="read">lern more</a>
-                    </div>
-                    <div>
-                        <i class='bx bx-crop' style='color:#00eeff'></i>
-                        <h2>UI/UX Design</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quis neque dicta explicabo
-                            velit similique delectus, mollitia error quod, ab cum non, blanditiis commodi voluptate et
-                            veritatis repellendus officiis iusto?</p>
-                        <a href="#" class="read">lern more</a>
-                    </div>
-                    <div>
-                        <i class='bx bxl-apple' style='color:#00eeff'></i>
-                        <h2>UI/UX Design</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quis neque dicta explicabo
-                            velit similique delectus, mollitia error quod, ab cum non, blanditiis commodi voluptate et
-                            veritatis repellendus officiis iusto?</p>
-                        <a href="#" class="read">lern more</a>
-                    </div>
-                </div>
-            </div>
-    </section> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <audio autoplay loop
-        src="audio/y2mate.com - Aaj Ki Raat  Stree 2  Tamannaah Bhatia  SachinJigar  Madhubanti  Divya  Amitabh  15th August.mp3"></audio> -->
     <script src="script.js"></script>
 </body>
 

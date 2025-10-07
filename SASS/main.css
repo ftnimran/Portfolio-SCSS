@@ -39,34 +39,114 @@
     opacity: 1;
   }
 }
-/* ====================== RESPONSIVE STYLE ====================== */
-/* --- Desktop Responsive --- */
-@media (min-width: 768px) {
-  .menu-btn {
-    display: none;
-  }
-  nav {
-    position: static;
-    right: 0;
-    width: auto;
-    height: auto;
-    flex-direction: row;
-    background: none;
-    box-shadow: none;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
-    border: none;
-    padding-top: 0;
-  }
-  .close-btn {
-    display: none;
-  }
-  nav a {
-    padding: 10px 15px;
-    color: white;
-    font-size: 1rem;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  /* border: 2px solid black; */
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #ededed;
+  background: #081b29;
+  overflow-x: hidden;
+}
+
+/* --- Header --- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #051129;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.15rem 10%;
+  z-index: 2000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  height: 4rem;
+  width: 4rem;
+  margin: 0;
+  padding: 0;
+  border-radius: 170px;
+  box-shadow: 0 0 20px #0ef;
+  position: relative;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: relative;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+}
+.menu-btn:hover {
+  transform: scale(1.1);
+}
+
+/* --- Sidebar (Desktop Default) --- */
+header nav {
+  position: static;
+  right: 0;
+  width: auto;
+  height: auto;
+  flex-direction: row;
+  background: none;
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+  border: none;
+  padding-top: 0;
+  display: flex;
+}
+
+.close-btn {
+  display: none;
+}
+
+header nav a {
+  display: inline-block;
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  letter-spacing: 0.5px;
+  transform: 0.3s;
+  transition: 0.5s;
+  opacity: 0;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+header nav a:hover {
+  color: #0ef;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.overlay {
+  display: none;
+}
+
 /* --- Example Sections --- */
 section {
   height: 100vh;
@@ -100,139 +180,70 @@ section {
   background: #f5d6f2;
 }
 
-/* ====================== ALL MIXIN CODE ====================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "poppins", sans-serif;
-  /* border: 2px solid black; */
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  color: #ededed;
-  background: #081b29;
-  padding-top: 70px;
-  overflow-x: hidden;
-}
-
-/* --- Header --- */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  background: rgba(17, 17, 17, 0.85);
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  z-index: 2000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.logo {
-  height: 45px;
-}
-
-.menu-btn {
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.menu-btn:hover {
-  transform: scale(1.1);
-}
-
-/* --- Sidebar (Right with Glass Effect) --- */
-nav {
-  position: fixed;
-  top: 0;
-  right: -300px;
-  /* hidden */
-  width: 280px;
-  height: 100%;
-  background: rgba(30, 30, 30, 0.5);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: -6px 0 20px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  padding-top: 80px;
-  transition: right 0.4s ease;
-  z-index: 1500;
-}
-
-nav.active {
-  right: 0;
-}
-
-/* Close Button */
-.close-btn {
-  position: absolute;
-  top: 18px;
-  right: 20px;
-  font-size: 26px;
-  color: white;
-  cursor: pointer;
-  background: none;
-  border: none;
-  transition: transform 0.2s ease;
-}
-
-.close-btn:hover {
-  transform: rotate(90deg);
-}
-
-nav a {
-  display: inline-block;
-  font-size: 25px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  margin-left: 35px;
-  transform: 0.3s;
-  transition: 0.5s;
-  opacity: 1;
-  animation: slideTop 0.5s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
-}
-
-nav a:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateX(-5px);
-}
-
-/* --- Overlay (with Fade Blur) --- */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 1000;
-}
-
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
+/* ====================== RESPONSIVE STYLE ====================== */
+@media (max-width: 767px) {
+  .menu-btn {
+    display: block;
+  }
+  header nav {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 280px;
+    height: 100%;
+    background: rgba(30, 30, 30, 0.5);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: -6px 0 20px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    padding-top: 70px;
+    transition: right 0.5s ease;
+    z-index: 1500;
+  }
+  header nav.active {
+    right: 0;
+  }
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 26px;
+    margin: 0.15rem 9%;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: transform 0.2s ease;
+  }
+  .close-btn:hover {
+    transform: rotate(90deg);
+  }
+  header nav a {
+    padding: 15px 25px;
+    width: 100%;
+    display: block;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+  }
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+  }
+  .overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
 }/*# sourceMappingURL=main.css.map */

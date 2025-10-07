@@ -1,139 +1,93 @@
 /* ====================== RESPONSIVE STYLE ====================== */
 
+@media (max-width: 767px) {
+  .menu-btn {
+    display: block;
+  }
 
-/* --- Desktop Responsive --- */
-        @media (min-width: 768px) {
-            .menu-btn {
-                display: none;
-            }
+  header nav {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 280px;
+    height: 100%;
+    background: rgba(30, 30, 30, 0.5);
+    backdrop-filter: blur(20px);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: -6px 0 20px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    padding-top: 70px;
+    transition: right 0.5s ease;
+    z-index: 1500;
+  }
 
-            nav {
-                position: static;
-                right: 0;
-                width: auto;
-                height: auto;
-                flex-direction: row;
-                background: none;
-                box-shadow: none;
-                backdrop-filter: none;
-                border: none;
-                padding-top: 0;
-            }
+  header nav.active {
+    right: 0;
+  }
 
-            .close-btn {
-                display: none;
-            }
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 26px;
+    margin: 0.15rem 9%;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: transform 0.2s ease;
+  }
 
-            nav a {
-                padding: 10px 15px;
-                color: white;
-                font-size: 1rem;
-                // transform: none !important;
-            }
+  .close-btn:hover {
+    transform: rotate(90deg);
+  }
 
-            // .overlay {
-            //     display: none;
-            // }
-        }
+  header nav a {
+    padding: 15px 25px;
+    width: 100%;
+    display: block;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+  }
 
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* --- Example Sections --- */
-        section {
-            height: 100vh;
-            padding: 100px 10px;
-            text-align: center;
-            font-size: 1.5rem;
-            color: #111;
-        }
-
-        #home {
-            background: #fffae6;
-        }
-
-        #about {
-            background: #d6f5d6;
-        }
-
-        #skills {
-            background: #d6e0f5;
-        }
-
-        #projects {
-            background: #f5d6d6;
-        }
-
-        #contact {
-            background: #d6f5f5;
-        }
-
-        #resume {
-            background: #f5d6f2;
-        }
+  .overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
 
 
 
 
-// @media (min-width: 768px) {
-//       .menu-btn {
-//         display: none;
-//       }
-
-//       nav {
-//         position: static;
-//         left: 0;
-//         width: auto;
-//         height: auto;
-//         flex-direction: row;
-//         background: none;
-//         padding-top: 0;
-//       }
-
-//       nav a {
-//         color: white;
-//         padding: 10px 15px;
-//       }
-
-//       .overlay {
-//         display: none;
-//       }
-//     }
-
-// @media (max-width: 768px) {
-
-//     .header .toggle {
-//         display: block;
-//     }
-
-//     .navbar{
-//         display: none;
-//     }
 
 
 
-// }
+
+
+
+
+
+
+
+
+
+
+
+
+  
+}
